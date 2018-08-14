@@ -4,7 +4,7 @@ import {connectWithLifecycle} from "react-lifecycle-component";
 import Dashboard from "../components/dashboard";
 import {Content} from "../reducer/content";
 import {get} from 'atp-pointfree';
-import {radio} from 'atp-ui';
+import {radio} from 'basic-reducers';
 
 const listKey = "cmsDashboardSelectedContent";
 
