@@ -12,7 +12,7 @@ import {HasPermission} from "atp-uac";
 const CanEdit = props => <HasPermission yes permissions={["cms.content.update"]} {...props} />;
 const CantEdit = props => <HasPermission no permissions={["cms.content.update"]} {...props} />;
 
-export default ({content, updateContent}) =>
+export default ({content, updateContent}) => content ?
     <Row>
         <Col xs={12} md={9}>
             <h1 style={{marginTop: 0}}>
@@ -85,4 +85,4 @@ export default ({content, updateContent}) =>
             </Panel>
             <Tags entityType="cmsContent" entityId={content.id} />
         </Col>
-    </Row>;
+    </Row> : <div>Select a post...</div>;

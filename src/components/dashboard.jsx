@@ -20,7 +20,7 @@ export default ({content, toggle, isSelected, selectedContentId, onNewContent}) 
                 </HasPermission>
                 <HasPermission permissions={["cms.content.view"]}>
                     {content.sort(sortBy("postDate")).reverse().map(item =>
-                        <ListGroupItem key={item.id} bsStyle={isSelected(item.id) ? "info" : "regular"} onClick={toggle(item.id)} >
+                        <ListGroupItem key={item.id} bsStyle={isSelected(item.id) ? "info" : null} onClick={toggle(item.id)} >
                             {item.title}
                             <div style={{float: "right"}}><em>
                                 {dateFormat(item.postDate, "mmmm dS, yyyy", true)}
